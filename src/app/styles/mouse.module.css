@@ -1,34 +1,47 @@
 @keyframes ani-mouse {
   0% {
-    opacity: 1;
-    margin: 9px 11px;
+    transform: translateY(0); /* Starting position */
+    opacity: 1; /* Full opacity */
   }
-  15% {
-    opacity: 1;
-    margin: 19px 11px;
+  40% {
+    transform: translateY(10px); /* Move down */
+    opacity: 0; /* Fade out */
   }
-  50% {
-    opacity: 0;
-    margin: 19px 11px;
+  60% {
+    transform: translateY(25px); /* Move a bit further down */
+    opacity: 0; /* Keep faded out */
+  }
+  90% {
+    transform: translateY(0); /* Move up quickly */
+    opacity: 0; /* Fade back in */
   }
   100% {
-    opacity: 0;
-    margin: 9px 11px;
+    transform: translateY(0); /* Move up quickly */
+    opacity: 1; /* Fade back in */
   }
 }
+
 .mouse {
   width: 35px;
   height: 55px;
-  box-sizing: border-box;
   border: 3px solid white;
-  border-radius: 23px;
+  border-radius: 50px; /* Rounded corners to resemble a mouse */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.mouse > * {
-  display: block;
+
+.mouse > span {
   width: 8px;
   height: 8px;
-  margin: 9px 11px;
-  background: white;
+  background-color: white;
   border-radius: 50%;
-  animation: ani-mouse 2.5s linear infinite;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -4px; /* Offset the dot to center it */
+  margin-top: -4px; /* Offset the dot to center it */
+  animation: ani-mouse 2.5s ease-in-out infinite; /* Animation for scrolling effect */
 }
