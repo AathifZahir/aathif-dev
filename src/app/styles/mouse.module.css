@@ -25,7 +25,7 @@
   width: 35px;
   height: 55px;
   border: 3px solid white;
-  border-radius: 50px; /* Rounded corners to resemble a mouse */
+  border-radius: 50px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@
   position: absolute;
   top: 30%;
   left: 50%;
-  margin-left: -4px; /* Offset the dot to center it */
-  margin-top: -4px; /* Offset the dot to center it */
-  animation: ani-mouse 2.5s ease-in-out infinite; /* Animation for scrolling effect */
+  margin-left: -4px;
+  margin-top: -4px;
+  animation: ani-mouse 2.5s ease-in-out infinite;
 }

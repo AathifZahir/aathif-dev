@@ -1,0 +1,29 @@
+/* CustomCursor.module.css */
+
+.cursorDot,
+.cursorOutline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursorDot {
+  width: 8px;
+  height: 8px;
+  background-color: #20d761;
+}
+
+.cursorOutline {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(97, 206, 135, 0.3);
+}
+
+.visible {
+  opacity: 1;
+}

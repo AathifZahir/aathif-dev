@@ -1,142 +1,134 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
+import styles from "../styles/cursor.module.css";
 
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+const CustomCursor = () => {
+  const [cursorVisible, setCursorVisible] = useState(true);
+  const [cursorEnlarged, setCursorEnlarged] = useState(false);
+  const dotRef = useRef<HTMLDivElement | null>(null);
+  const outlineRef = useRef<HTMLDivElement | null>(null);
 
-const CustomCursor: React.FC = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const amount = 20;
-  const sineDots = Math.floor(amount * 0.3);
-  const width = 26;
-  const idleTimeout = 150;
-  let lastFrame = 0;
-  let mousePosition = { x: 0, y: 0 };
-  let dots: any[] = [];
-  let timeoutID: any;
-  let idle = false;
+  const [isBrowser, setIsBrowser] = useState(false);
 
-  class Dot {
-    index: number;
-    element: HTMLSpanElement;
-    anglespeed: number;
-    x: number;
-    y: number;
-    scale: number;
-    range: number;
-    limit: number;
-    lockX?: number;
-    lockY?: number;
-    angleX?: number;
-    angleY?: number;
-
-    constructor(index = 0) {
-      this.index = index;
-      this.anglespeed = 0.05;
-      this.x = 0;
-      this.y = 0;
-      this.scale = 1 - 0.05 * index;
-      this.range = width / 2 - (width / 2) * this.scale + 2;
-      this.limit = width * 0.75 * this.scale;
-      this.element = document.createElement("span");
-      gsap.set(this.element, { scale: this.scale });
-      cursorRef.current!.appendChild(this.element);
-    }
-
-    lock() {
-      this.lockX = this.x;
-      this.lockY = this.y;
-      this.angleX = Math.PI * 2 * Math.random();
-      this.angleY = Math.PI * 2 * Math.random();
-    }
-
-    draw(delta: number) {
-      if (!idle || this.index <= sineDots) {
-        gsap.set(this.element, { x: this.x, y: this.y });
-      } else {
-        this.angleX = (this.angleX ?? 0) + this.anglespeed;
-        this.angleY = (this.angleY ?? 0) + this.anglespeed;
-        this.y = (this.lockY ?? 0) + Math.sin(this.angleY) * this.range;
-        this.x = (this.lockX ?? 0) + Math.sin(this.angleX) * this.range;
-        gsap.set(this.element, { x: this.x, y: this.y });
-      }
-    }
-  }
+  const delay = 8;
+  let _x = 0;
+  let _y = 0;
+  let endX = 0;
+  let endY = 0;
 
   useEffect(() => {
-    const cursor = cursorRef.current;
-    if (!cursor) return;
-
-    const startIdleTimer = () => {
-      timeoutID = setTimeout(goInactive, idleTimeout);
-      idle = false;
-    };
-
-    const resetIdleTimer = () => {
-      clearTimeout(timeoutID);
-      startIdleTimer();
-    };
-
-    const goInactive = () => {
-      idle = true;
-      dots.forEach((dot) => dot.lock());
-    };
-
-    const onMouseMove = (event: MouseEvent) => {
-      mousePosition.x = event.clientX - width / 2;
-      mousePosition.y = event.clientY - width / 2;
-      resetIdleTimer();
-    };
-
-    const onTouchMove = (event: TouchEvent) => {
-      mousePosition.x = event.touches[0].clientX - width / 2;
-      mousePosition.y = event.touches[0].clientY - width / 2;
-      resetIdleTimer();
-    };
-
-    const buildDots = () => {
-      for (let i = 0; i < amount; i++) {
-        dots.push(new Dot(i));
-      }
-    };
-
-    const render = (timestamp: number) => {
-      const delta = timestamp - lastFrame;
-      positionCursor(delta);
-      lastFrame = timestamp;
-      requestAnimationFrame(render);
-    };
-
-    const positionCursor = (delta: number) => {
-      let x = mousePosition.x;
-      let y = mousePosition.y;
-      dots.forEach((dot, index, dots) => {
-        const nextDot = dots[index + 1] || dots[0];
-        dot.x = x;
-        dot.y = y;
-        dot.draw(delta);
-        if (!idle || index <= sineDots) {
-          const dx = (nextDot.x - dot.x) * 0.35;
-          const dy = (nextDot.y - dot.y) * 0.35;
-          x += dx;
-          y += dy;
-        }
-      });
-    };
-
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("touchmove", onTouchMove);
-
-    startIdleTimer();
-    buildDots();
-    requestAnimationFrame(render);
-
-    return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("touchmove", onTouchMove);
-    };
+    // Check if we're on the client-side to avoid `window` reference issues during SSR
+    setIsBrowser(true);
   }, []);
 
-  return <div ref={cursorRef} id="cursor" className="dot-cursor"></div>;
+  useEffect(() => {
+    if (isBrowser) {
+      endX = window.innerWidth / 2;
+      endY = window.innerHeight / 2;
+
+      const updateCursor = (e: MouseEvent) => {
+        setCursorVisible(true);
+
+        endX = e.pageX;
+        endY = e.pageY;
+
+        if (dotRef.current) {
+          dotRef.current.style.top = `${endY}px`;
+          dotRef.current.style.left = `${endX}px`;
+        }
+      };
+
+      const handleMouseEnter = () => {
+        setCursorVisible(true);
+        if (dotRef.current && outlineRef.current) {
+          dotRef.current.style.opacity = "1";
+          outlineRef.current.style.opacity = "1";
+        }
+      };
+
+      const handleMouseLeave = () => {
+        setCursorVisible(false);
+        if (dotRef.current && outlineRef.current) {
+          dotRef.current.style.opacity = "0";
+          outlineRef.current.style.opacity = "0";
+        }
+      };
+
+      const handleMouseOverLink = () => {
+        setCursorEnlarged(true);
+      };
+
+      const handleMouseOutLink = () => {
+        setCursorEnlarged(false);
+      };
+
+      // Event listeners
+      document.addEventListener("mousemove", updateCursor);
+      document.addEventListener("mouseenter", handleMouseEnter);
+      document.addEventListener("mouseleave", handleMouseLeave);
+      document.querySelectorAll("a").forEach((el) => {
+        el.addEventListener("mouseover", handleMouseOverLink);
+        el.addEventListener("mouseout", handleMouseOutLink);
+      });
+
+      return () => {
+        document.removeEventListener("mousemove", updateCursor);
+        document.removeEventListener("mouseenter", handleMouseEnter);
+        document.removeEventListener("mouseleave", handleMouseLeave);
+        document.querySelectorAll("a").forEach((el) => {
+          el.removeEventListener("mouseover", handleMouseOverLink);
+          el.removeEventListener("mouseout", handleMouseOutLink);
+        });
+      };
+    }
+  }, [isBrowser]);
+
+  useEffect(() => {
+    if (isBrowser) {
+      const animateOutline = () => {
+        if (outlineRef.current) {
+          _x += (endX - _x) / delay;
+          _y += (endY - _y) / delay;
+          outlineRef.current.style.top = `${_y}px`;
+          outlineRef.current.style.left = `${_x}px`;
+        }
+        requestAnimationFrame(animateOutline);
+      };
+
+      animateOutline();
+    }
+  }, [isBrowser]);
+
+  const toggleCursorSize = () => {
+    if (dotRef.current && outlineRef.current) {
+      if (cursorEnlarged) {
+        dotRef.current.style.transform = "translate(-50%, -50%) scale(0.75)";
+        outlineRef.current.style.transform = "translate(-50%, -50%) scale(1.5)";
+      } else {
+        dotRef.current.style.transform = "translate(-50%, -50%) scale(1)";
+        outlineRef.current.style.transform = "translate(-50%, -50%) scale(1)";
+      }
+    }
+  };
+
+  useEffect(() => {
+    toggleCursorSize();
+  }, [cursorEnlarged]);
+
+  return (
+    <>
+      <div
+        ref={dotRef}
+        className={`${styles.cursorDot} ${cursorVisible ? styles.visible : ""}`}
+      ></div>
+      <div
+        ref={outlineRef}
+        className={`${styles.cursorOutline} ${
+          cursorVisible ? styles.visible : ""
+        }`}
+      ></div>
+    </>
+  );
 };
 
 export default CustomCursor;
