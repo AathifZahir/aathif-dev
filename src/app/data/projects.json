@@ -1,0 +1,68 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "name": "MSR Tailor Store",
+        "technologies": ["React", "Node.js", "MongoDB", "Express.js"],
+        "date": "July 2024",
+        "description": "A tailored management system for clothing businesses, enabling efficient order handling, material management, and user-friendly checkout.",
+        "link": "https://example.com/msr-tailor-store",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 2,
+        "name": "ProIntern - Internship Finder",
+        "technologies": ["React Native", "Firebase"],
+        "date": "November 2024",
+        "description": "A mobile application simplifying internship management for recruiters and interns with robust CRUD operations and user-friendly UI.",
+        "link": "https://example.com/prointern",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 3,
+        "name": "Minders - Creative Community Platform",
+        "technologies": ["React", "Tailwind CSS", "Swiper.js"],
+        "date": "March 2024",
+        "description": "A platform for creatives to showcase their work, featuring responsive design, interactive components, and seamless transitions.",
+        "link": "https://example.com/minders",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 4,
+        "name": "Online E-commerce Store",
+        "technologies": ["PHP", "MySQL", "XAMPP"],
+        "date": "July 2023",
+        "description": "An e-commerce platform offering secure user authentication, efficient order tracking, and robust backend features.",
+        "link": "https://example.com/online-ecommerce-store",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 5,
+        "name": "Online Food Ordering System",
+        "technologies": ["HTML", "CSS", "JavaScript", "Java (Servlets, JSP)", "MySQL"],
+        "date": "December 2022",
+        "description": "A food ordering platform with features like cart management, user authentication, and real-time order tracking.",
+        "link": "https://example.com/online-food-ordering",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 6,
+        "name": "MediCare - Healthcare Management System",
+        "technologies": ["React", "Firebase", "Tailwind CSS", "Jest"],
+        "date": "November 2023",
+        "description": "A healthcare platform offering secure payments, role-based access control, and comprehensive testing for a robust experience.",
+        "link": "https://example.com/medicare",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 7,
+        "name": "Shopping Eye",
+        "technologies": ["React Native", "Node.js", "Express", "MongoDB"],
+        "date": "May 2023",
+        "description": "A shopping app with advanced admin features, live data fetching, and reporting for product and shop analysis.",
+        "link": "https://example.com/shopping-eye",
+        "image": "https://via.placeholder.com/150"
+      }
+    ]
+  }
+  
