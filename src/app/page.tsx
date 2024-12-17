@@ -14,11 +14,6 @@ type Project = {
   link: string;
 };
 
-function displaydata(project: Project) {
-  console.log(project);
-}
-
-console.log(ProjectData);
 export default function Home() {
   return (
     <div>
@@ -29,11 +24,9 @@ export default function Home() {
       <div className="mt-10">
         <Hero />
       </div>
-      <div>
+      <div className={`relative m-20`} style={{ minHeight: "300vh" }}>
         {ProjectData.projects.map((project: Project, index: number) => (
-          <div key={index}>
-            <Projects project={project} />
-          </div>
+          <Projects key={project.id} project={project} index={0} />
         ))}
       </div>
     </div>
