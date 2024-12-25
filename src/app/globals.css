@@ -22,6 +22,8 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+//custom cursor
+
 .dot-cursor {
   pointer-events: none;
   position: fixed;
