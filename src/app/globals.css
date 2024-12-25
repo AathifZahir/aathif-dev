@@ -3,15 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #292929;
-    --foreground: #ededed;
-  }
+  --background: #080909;
+  --p2: #0f3d2e;
+  --p3: #1faa59;
+  --p4: #7db691;
+  --p5: #c7eed4;
 }
 
 body {
@@ -57,4 +53,24 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+.project-card {
+  position: relative;
+}
+
+.custom-cursor {
+  position: fixed;
+  z-index: 9999; /* Ensures the custom cursor is always on top */
+  pointer-events: none; /* Makes sure the cursor doesn't block interactions */
+  width: 20px; /* Customize the cursor size */
+  height: 20px;
+  background-color: #000; /* Custom cursor color */
+  border-radius: 50%; /* Make it circular */
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+a {
+  cursor: none !important;
 }

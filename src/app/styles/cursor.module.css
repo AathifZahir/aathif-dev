@@ -10,18 +10,19 @@
   opacity: 0;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  zindex: 9999;
 }
 
 .cursorDot {
   width: 8px;
   height: 8px;
-  background-color: #20d761;
+  background-color: #1faa59;
 }
 
 .cursorOutline {
   width: 40px;
   height: 40px;
-  background-color: rgba(97, 206, 135, 0.3);
+  background-color: rgba(31, 170, 89, 0.5);
 }
 
 .visible {

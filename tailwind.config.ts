@@ -10,8 +10,11 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
-        green: '#20D761',
+        p1: "var(--p1)",
+        p2: "var(--p2)",
+        p3: "var(--p3)",
+        p4: "var(--p4)",
+        p5: "var(--p5)",
       },
     },
   },

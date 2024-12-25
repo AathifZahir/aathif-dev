@@ -16,8 +16,8 @@ const CustomCursor = () => {
   let endX = 0;
   let endY = 0;
 
+  // Set isBrowser to true when the component is mounted on the client
   useEffect(() => {
-    // Check if we're on the client-side to avoid `window` reference issues during SSR
     setIsBrowser(true);
   }, []);
 
@@ -28,7 +28,6 @@ const CustomCursor = () => {
 
       const updateCursor = (e: MouseEvent) => {
         setCursorVisible(true);
-
         endX = e.pageX;
         endY = e.pageY;
 
@@ -62,7 +61,6 @@ const CustomCursor = () => {
         setCursorEnlarged(false);
       };
 
-      // Event listeners
       document.addEventListener("mousemove", updateCursor);
       document.addEventListener("mouseenter", handleMouseEnter);
       document.addEventListener("mouseleave", handleMouseLeave);
@@ -120,12 +118,14 @@ const CustomCursor = () => {
       <div
         ref={dotRef}
         className={`${styles.cursorDot} ${cursorVisible ? styles.visible : ""}`}
+        style={{ zIndex: 9999 }} // Ensure the cursor dot is on top
       ></div>
       <div
         ref={outlineRef}
         className={`${styles.cursorOutline} ${
           cursorVisible ? styles.visible : ""
         }`}
+        style={{ zIndex: 9998 }} // Ensure the outline is below the dot
       ></div>
     </>
   );
