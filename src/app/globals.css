@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Inika";
+  src: url("./fonts/Inika-Regular.ttf") format("truetype");
+}
 
 :root {
   --background: #080909;
@@ -54,10 +58,6 @@ html {
   to {
     transform: rotate(360deg);
   }
-}
-
-.project-card {
-  position: relative;
 }
 
 .custom-cursor {

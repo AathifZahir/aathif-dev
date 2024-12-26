@@ -1,8 +1,9 @@
 import CustomCursor from "./components/CustomCursor";
 import ProjectData from "./data/projects.json";
 import Header from "./components/Header";
+import Home from "./components/Home";
 
-export default function Home() {
+export default function app() {
   return (
     <div>
       {/*background border*/}
@@ -26,6 +27,7 @@ export default function Home() {
       {/*container*/}
       <div>
         <Header />
+        <Home />
       </div>
     </div>
   );

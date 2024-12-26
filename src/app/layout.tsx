@@ -6,7 +6,7 @@ import "./globals.css";
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
-  weight: ["400", "700"],
+  weight: ["400", "700", "300", "500", "600"],
 });
 
 export const metadata: Metadata = {
