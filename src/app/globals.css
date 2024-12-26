@@ -13,17 +13,16 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", sans-serif; /* Set DM Sans as the font */
 }
 
 body,
 html {
   cursor: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", sans-serif; /* Set DM Sans for the body and html */
 }
 
-//custom cursor
-
+// Custom cursor styles
 .dot-cursor {
   pointer-events: none;
   position: fixed;

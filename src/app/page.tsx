@@ -1,5 +1,6 @@
 import CustomCursor from "./components/CustomCursor";
 import ProjectData from "./data/projects.json";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
       ></div>{" "}
       <CustomCursor />
       {/*container*/}
-      <div></div>
+      <div>
+        <Header />
+      </div>
     </div>
   );
 }
