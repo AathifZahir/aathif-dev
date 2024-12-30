@@ -38,7 +38,15 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="w-2/5"></div>
+      <div className="w-2/5">
+        <div className="relative flex justify-center items-center">
+          <img
+            src="/images/me.png"
+            alt="Aathif's Image"
+            className="rounded-full w-64 transition ease-in-out duration-600 hover:shadow-glow"
+          ></img>
+        </div>
+      </div>
     </div>
   );
 }

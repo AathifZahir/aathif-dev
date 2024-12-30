@@ -9,20 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^11.15.0",
     "gsap": "^3.12.5",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "^5.4.0",
+    "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
   }
 }

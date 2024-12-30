@@ -1,3 +1,4 @@
+import { keyframes } from "framer-motion";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,6 +22,24 @@ export default {
       fontFamily: {
         inika: ["Inika", "sans-serif"],
       },
+      boxShadow: {
+        glow: "0 0 30px 5px rgba(125, 182, 145, 0.45)",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "infinite-scroll-rev": {
+          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll-rev": "infinite-scroll-rev 25s linear infinite",
+      },
+      
     },
   },
   plugins: [],
