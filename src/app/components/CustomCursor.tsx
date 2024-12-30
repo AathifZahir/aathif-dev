@@ -69,6 +69,16 @@ const CustomCursor = () => {
         el.addEventListener("mouseout", handleMouseOutLink);
       });
 
+      // Scroll event to update cursor position
+      const updateOnScroll = () => {
+        if (dotRef.current) {
+          dotRef.current.style.top = `${endY + window.scrollY}px`;
+          dotRef.current.style.left = `${endX + window.scrollX}px`;
+        }
+      };
+
+      document.addEventListener("scroll", updateOnScroll);
+
       return () => {
         document.removeEventListener("mousemove", updateCursor);
         document.removeEventListener("mouseenter", handleMouseEnter);
@@ -77,6 +87,7 @@ const CustomCursor = () => {
           el.removeEventListener("mouseover", handleMouseOverLink);
           el.removeEventListener("mouseout", handleMouseOutLink);
         });
+        document.removeEventListener("scroll", updateOnScroll);
       };
     }
   }, [isBrowser]);

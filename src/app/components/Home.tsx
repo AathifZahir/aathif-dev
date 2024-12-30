@@ -43,7 +43,7 @@ export default function Home() {
           <img
             src="/images/me.png"
             alt="Aathif's Image"
-            className="rounded-full w-64 transition ease-in-out duration-600 hover:shadow-glow"
+            className="rounded-full w-64 transition ease-in-out duration-1000 hover:shadow-glow"
           ></img>
         </div>
       </div>

@@ -18,6 +18,7 @@ export default {
         p5: "var(--p5)",
         'p4/50': 'rgba(125, 182, 145, 0.3)',
         'p5/50': 'rgba(199, 238, 212, 0.5)', 
+        'p6/50': 'rgba(34, 53, 46, 0.5)',
       },
       fontFamily: {
         inika: ["Inika", "sans-serif"],
