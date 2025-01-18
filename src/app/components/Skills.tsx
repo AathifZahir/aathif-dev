@@ -24,9 +24,6 @@ export default function Skills() {
   function even(index: number) {
     return index % 2 === 0;
   }
-  function odd(index: number) {
-    return index % 2 !== 0;
-  }
 
   return (
     <div className="container mt-3 w-[94.5%] mx-auto">

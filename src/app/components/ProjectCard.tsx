@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       >
         <div className="rounded-3xl bg-p6/50 p-10">
           <img
-            src={project.image}
+            src={project.image || "/path/to/fallback-image.jpg"} // Fallback image if no image is available
             alt={project.name}
             className="rounded-3xl overflow-hidden w-[400px] h-[300px] object-cover"
           />

@@ -1,8 +1,8 @@
-import CustomCursor from "./components/CustomCursor";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Achievements from "./components/Achievements";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
       <div className="absolute top-0 right-10 h-full w-[0.5px] bg-p2 z-50"></div>
 
       {/* Content */}
-      <CustomCursor />
+      {/*<CustomCursor />*/}
       <div className="relative pb-20 h-full">
         <Header />
         <Home />
@@ -22,6 +22,8 @@ export default function App() {
         <Skills />
         <hr className="h-px mt-20 bg-p2 border-0" />
         <Projects />
+        <hr className="h-px mt-20 bg-p2 border-0" />
+        <Achievements />
       </div>
     </div>
   );

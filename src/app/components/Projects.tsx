@@ -1,7 +1,21 @@
 import ProjectCard from "./ProjectCard";
-import { projects } from "../data/projects.json";
+import projectsData from "../data/projects.json";
 
-console.log(projects);
+interface Project {
+  id: number;
+  name: string;
+  technologies: string[];
+  date: string;
+  description: string;
+  link: string;
+  image: string;
+}
+
+interface ProjectsData {
+  projects: Project[];
+}
+
+const projects: Project[] = projectsData.projects;
 
 export default function Projects() {
   return (

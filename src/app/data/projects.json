@@ -7,7 +7,7 @@
       "date": "July 2024",
       "description": "MSR Tailor Store is a comprehensive tailored management system designed specifically for clothing businesses. It enables seamless order handling, efficient material management, and a user-friendly checkout process. The system is built with React for the front end, Node.js for the backend, and MongoDB to store data, allowing for smooth operations and improved business efficiency.",
       "link": "https://example.com/msr-tailor-store",
-      "image": "https://via.placeholder.com/150"
+      "image": "https://placehold.co/600"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "date": "November 2024",
       "description": "ProIntern is a mobile application that streamlines the internship search and management process for both recruiters and interns. By utilizing React Native, it provides a cross-platform user interface, while Firebase handles real-time data management for CRUD operations. The app aims to enhance the recruitment experience with a simplified, user-friendly interface and intuitive design.",
       "link": "https://example.com/prointern",
-      "image": "https://via.placeholder.com/150"
+      "image": "https://placehold.co/600"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "date": "March 2024",
       "description": "Minders is a dynamic creative community platform that allows artists, designers, and other creatives to showcase their work. The platform features a responsive design, built with React and Tailwind CSS, providing an intuitive interface for users. Swiper.js is used to create smooth, interactive transitions between projects, making the browsing experience enjoyable and seamless for both creators and viewers.",
       "link": "https://example.com/minders",
-      "image": "https://via.placeholder.com/150"
+      "image": "https://placehold.co/600"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "date": "August 2023",
       "description": "Py Scrap is a web scraping application developed with Python, BeautifulSoup, and Flask. The app extracts structured data from websites and presents it through a simple Flask web interface. This project allows for the extraction of valuable information from different online sources, automating data collection tasks and displaying the results in an easily accessible format.",
       "link": "https://example.com/py-scrap",
-      "image": "https://via.placeholder.com/150"
+      "image": "https://placehold.co/600"
     }
   ]
 }

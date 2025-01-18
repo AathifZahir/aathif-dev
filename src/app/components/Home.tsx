@@ -30,9 +30,9 @@ export default function Home() {
               <path
                 d="M18.25 12.125V15.625C18.25 16.0891 18.0568 16.5342 17.713 16.8624C17.3692 17.1906 16.9029 17.375 16.4167 17.375H3.58333C3.0971 17.375 2.63079 17.1906 2.28697 16.8624C1.94315 16.5342 1.75 16.0891 1.75 15.625V12.125M5.41667 7.75L10 12.125M10 12.125L14.5833 7.75M10 12.125V1.625"
                 stroke="#080909"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </a>

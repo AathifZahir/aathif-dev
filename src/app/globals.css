@@ -22,7 +22,6 @@ body {
 
 body,
 html {
-  cursor: none;
   font-family: "DM Sans", sans-serif; /* Set DM Sans for the body and html */
 }
 
@@ -72,6 +71,6 @@ html {
   transition: transform 0.1s ease;
 }
 
-a {
+/*a {
   cursor: none !important;
-}
+}*/
