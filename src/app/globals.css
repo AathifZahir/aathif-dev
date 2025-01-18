@@ -12,17 +12,19 @@
   --p3: #1faa59;
   --p4: #7db691;
   --p5: #c7eed4;
+  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-size: 20px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "DM Sans", sans-serif; /* Set DM Sans as the font */
+  font-family: "DM Sans", sans-serif;
 }
 
 body,
 html {
-  font-family: "DM Sans", sans-serif; /* Set DM Sans for the body and html */
+  font-family: "DM Sans", sans-serif;
 }
 
 // Custom cursor styles
@@ -61,12 +63,12 @@ html {
 
 .custom-cursor {
   position: fixed;
-  z-index: 9999; /* Ensures the custom cursor is always on top */
-  pointer-events: none; /* Makes sure the cursor doesn't block interactions */
-  width: 20px; /* Customize the cursor size */
+  z-index: 9999;
+  pointer-events: none;
+  width: 20px;
   height: 20px;
-  background-color: #000; /* Custom cursor color */
-  border-radius: 50%; /* Make it circular */
+  background-color: #000;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease;
 }
