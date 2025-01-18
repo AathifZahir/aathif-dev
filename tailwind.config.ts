@@ -19,6 +19,7 @@ export default {
         'p4/50': 'rgba(125, 182, 145, 0.3)',
         'p5/50': 'rgba(199, 238, 212, 0.5)', 
         'p6/50': 'rgba(34, 53, 46, 0.5)',
+        p7: "rgba(34, 53, 46, 0)"
       },
       fontFamily: {
         inika: ["Inika", "sans-serif"],
@@ -40,7 +41,13 @@ export default {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
         "infinite-scroll-rev": "infinite-scroll-rev 25s linear infinite",
       },
-      
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ["autofill"], 
+      textColor: ["autofill"],       
+      borderColor: ["autofill"],     
     },
   },
   plugins: [],
