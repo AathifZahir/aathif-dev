@@ -6,7 +6,7 @@
       "technologies": ["React", "Node.js", "MongoDB", "Express.js"],
       "date": "July 2024",
       "description": "MSR Tailor Store is a comprehensive tailored management system designed specifically for clothing businesses. It enables seamless order handling, efficient material management, and a user-friendly checkout process. The system is built with React for the front end, Node.js for the backend, and MongoDB to store data, allowing for smooth operations and improved business efficiency.",
-      "link": "https://example.com/msr-tailor-store",
+      "link": "https://github.com/AathifZahir/MSR-ITP",
       "image": "images/p1.png"
     },
     {
@@ -15,7 +15,7 @@
       "technologies": ["React Native", "Firebase"],
       "date": "November 2024",
       "description": "ProIntern is a mobile application that streamlines the internship search and management process for both recruiters and interns. By utilizing React Native, it provides a cross-platform user interface, while Firebase handles real-time data management for CRUD operations. The app aims to enhance the recruitment experience with a simplified, user-friendly interface and intuitive design.",
-      "link": "https://example.com/prointern",
+      "link": "https://github.com/AathifZahir/ProIntern",
       "image": "images/p2.png"
     },
     {
@@ -24,17 +24,17 @@
       "technologies": ["React", "Tailwind CSS", "Swiper.js"],
       "date": "March 2024",
       "description": "Minders is a dynamic creative community platform that allows artists, designers, and other creatives to showcase their work. The platform features a responsive design, built with React and Tailwind CSS, providing an intuitive interface for users. Swiper.js is used to create smooth, interactive transitions between projects, making the browsing experience enjoyable and seamless for both creators and viewers.",
-      "link": "https://example.com/minders",
+      "link": "https://github.com/AathifZahir/Minders",
       "image": "images/p3.png"
     },
     {
       "id": 4,
-      "name": "Py Scrap",
-      "technologies": ["Python", "BeautifulSoup", "Flask"],
+      "name": "Amazon Product Scraper",
+      "technologies": ["Python", "Scrapy", "MongoDB"],
       "date": "August 2023",
-      "description": "Py Scrap is a web scraping application developed with Python, BeautifulSoup, and Flask. The app extracts structured data from websites and presents it through a simple Flask web interface. This project allows for the extraction of valuable information from different online sources, automating data collection tasks and displaying the results in an easily accessible format.",
-      "link": "https://example.com/py-scrap",
+      "description": "The Amazon Product Scraper is a web scraping tool developed with Python and Scrapy. It extracts product information such as names, prices, ratings, and images from Amazon and stores the data in a MongoDB database. The scraper supports dynamic keyword-based searches, pagination handling, and is customizable for various product categories.",
+      "link": "https://github.com/AathifZahir/books_scraper",
       "image": "images/p4.png"
-    }
+    }    
   ]
 }

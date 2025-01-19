@@ -6,6 +6,11 @@
   src: url("./fonts/Inika-Regular.ttf") format("truetype");
 }
 
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #080909;
   --p2: #0f3d2e;

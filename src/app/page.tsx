@@ -16,17 +16,27 @@ export default function App() {
 
       {/* Content */}
       {/*<CustomCursor />*/}
-      <div className="relative pb-20 h-full">
+      <div className="relative pb-10 h-full">
         <Header />
-        <Home />
+        <div id="home">
+          <Home />
+        </div>
         <hr className="h-px mt-20 bg-p2 border-0" />
-        <Skills />
+        <div id="skills">
+          <Skills />
+        </div>
         <hr className="h-px mt-20 bg-p2 border-0" />
-        <Projects />
+        <div id="projects">
+          <Projects />
+        </div>
         <hr className="h-px mt-20 bg-p2 border-0" />
-        <Achievements />
+        <div id="achievements">
+          <Achievements />
+        </div>
         <hr className="h-px mt-20 bg-p2 border-0" />
-        <Contact />
+        <div id="contact">
+          <Contact />
+        </div>
       </div>
       <div className="text-p4 text-center p-2">
         © 2025 Aathif Zahir. All rights reserved.

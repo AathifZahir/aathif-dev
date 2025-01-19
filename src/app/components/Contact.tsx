@@ -2,7 +2,7 @@ import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <div className="w-10/12 mx-auto my-10 flex justify-between">
+    <div className="w-10/12 mx-auto my-16 flex justify-between">
       {/* Left Section */}
       <div className="w-full lg:w-1/3 text-p5 space-y-8">
         <div className="text-2xl font-bold">Let's Connect</div>
@@ -11,52 +11,92 @@ export default function Contact() {
           opportunities, a collaboration, or just to chat about tech, feel free
           to reach out. Let’s create something amazing together!
         </div>
-        <div className="flex justify-between w-1/2">
+        <div className="flex flex-col space-y-4 w-1/2">
           {/* Email */}
-          <a
-            href="mailto:your-email@example.com"
-            className="text-p5 hover:text-p4 transition text-4xl"
-            aria-label="Email"
-          >
-            <FaEnvelope />
-          </a>
+          <div className="flex items-center space-x-5">
+            <a
+              href="mailto:aathifzahir12@gmail.com"
+              className="text-p5 hover:text-p4 transition text-2xl"
+              aria-label="Email Icon"
+            >
+              <FaEnvelope />
+            </a>
+            <a
+              href="mailto:aathifzahir12@gmail.com"
+              className="text-p5 hover:text-p4 transition text-lg hover:underline"
+              aria-label="Email Text"
+            >
+              aathifzahir12@gmail.com
+            </a>
+          </div>
 
           {/* Phone */}
-          <a
-            href="tel:+1234567890"
-            className="text-p5 hover:text-p4 transition text-4xl"
-            aria-label="Phone"
-          >
-            <FaPhone />
-          </a>
+          <div className="flex items-center space-x-5">
+            <a
+              href="tel:+94765271411"
+              className="text-p5 hover:text-p4 transition text-2xl"
+              aria-label="Phone Icon"
+            >
+              <FaPhone />
+            </a>
+            <a
+              href="tel:+94765271411"
+              className="text-p5 hover:text-p4 transition text-lg hover:underline"
+              aria-label="Phone Text"
+            >
+              +94 765 271 411
+            </a>
+          </div>
 
           {/* LinkedIn */}
-          <a
-            href="https://linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-p5 hover:text-p4 transition text-4xl"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin />
-          </a>
+          <div className="flex items-center space-x-5">
+            <a
+              href="https://linkedin.com/in/aathifzahir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-p5 hover:text-p4 transition text-2xl"
+              aria-label="LinkedIn Icon"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://linkedin.com/in/aathifzahir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-p5 hover:text-p4 transition text-lg hover:underline"
+              aria-label="LinkedIn Text"
+            >
+              linkedin.com/in/aathifzahir
+            </a>
+          </div>
 
           {/* GitHub */}
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-p5 hover:text-p4 transition text-4xl"
-            aria-label="GitHub"
-          >
-            <FaGithub />
-          </a>
+          <div className="flex items-center space-x-5">
+            <a
+              href="https://github.com/aathifzahir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-p5 hover:text-p4 transition text-2xl"
+              aria-label="GitHub Icon"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://github.com/aathifzahir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-p5 hover:text-p4 transition text-lg hover:underline"
+              aria-label="GitHub Text"
+            >
+              github.com/aathifzahir
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Right Section: Contact Form */}
       <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
-        <div className="bg-p6/50 p-6 rounded-lg">
+        <div className="bg-p6/50 p-6 rounded-2xl">
           <form action="https://api.web3forms.com/submit" method="POST">
             {/* Web3Forms Access Key */}
             <input

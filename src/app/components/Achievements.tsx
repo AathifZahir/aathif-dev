@@ -38,7 +38,7 @@ export default function Achievements() {
           >
             {achievements.map((achievement) => (
               <SwiperSlide key={achievement.title}>
-                <div className="p-8 rounded-lg shadow-lg bg-p6/50 h-[450px] flex flex-col justify-between gap-2 w-96">
+                <div className="p-8 rounded-2xl shadow-lg bg-p6/50 h-[450px] flex flex-col justify-between gap-2 w-96">
                   <img
                     src={achievement.image}
                     alt={achievement.title}
