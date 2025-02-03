@@ -11,7 +11,7 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-// Add DM Sans font
+// Add font
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
