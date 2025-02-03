@@ -1,21 +1,21 @@
 export default function Home() {
   return (
-    <div className="container flex justify-center items-center mt-20">
-      <div className="w-2/5">
-        <div className="text-8xl text-p3 font-inika">
+    <div className="container flex flex-col sm:flex-col-reverse md:flex-row justify-center items-center mt-20 gap-10 md:gap-20">
+      {/* Text Section */}
+      <div className="w-full md:w-2/5">
+        <div className="text-6xl md:text-8xl text-p3 font-inika">
           Hello
           <br />
           World,
         </div>
-        <div className="text-xl text-p4 mt-5 pr-20">
+        <div className="text-lg md:text-xl text-p4 mt-5 pr-20">
           I'm Aathif, passionate about creating and collaborating on impactful
           technologies. Explore my work, and let's connect to bring innovative
           ideas to life!
         </div>
         <div className="rounded-xl bg-p4 w-fit p-4 flex mt-10 hover:shadow-p4/50 transition ease-in-out duration-300 hover:-translate-y-1 hover:shadow-lg hover:scale-110">
           <a
-            href="https://www.dropbox.com/scl/fi/92rqk09pwqc4psznzlyvn/Aathif_Zahir_CV.pdf?rlkey=3rra1ehgin0zwalytk2khl966&st=m970an65&dl=1
-"
+            href="https://www.dropbox.com/scl/fi/92rqk09pwqc4psznzlyvn/Aathif_Zahir_CV.pdf?rlkey=3rra1ehgin0zwalytk2khl966&st=m970an65&dl=1"
             download={"Aathif_Zahir_CV.pdf"}
             className="flex items-center space-x-4"
           >
@@ -38,13 +38,15 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="w-2/5">
+
+      {/* Image Section */}
+      <div className="w-full md:w-2/5">
         <div className="relative flex justify-center items-center">
           <img
             src="/images/me.png"
             alt="Aathif's Image"
-            className="rounded-full w-64 transition ease-in-out duration-1000 hover:shadow-glow"
-          ></img>
+            className="rounded-full w-64 md:w-80 transition ease-in-out duration-1000 hover:shadow-glow"
+          />
         </div>
       </div>
     </div>
